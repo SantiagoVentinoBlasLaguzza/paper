@@ -1,0 +1,474 @@
+2025-05-17 15:55:23,834 - INFO - Using device: cuda
+2025-05-17 15:55:23,834 - INFO - --- Initializing Datasets and Performing Subject-Aware Splits ---
+2025-05-17 15:55:23,894 - INFO - Total valid files found: 352
+2025-05-17 15:55:23,895 - ERROR - GroupShuffleSplit failed: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all(). This can happen with small datasets/groups or if a split results in zero samples. Consider reviewing data or split proportions.
+2025-05-17 15:55:23,895 - INFO - Attempting fallback to original stratified split (not group-aware). THIS MAY INTRODUCE LEAKAGE if subjects have multiple files.
+2025-05-17 15:55:23,896 - INFO - Fallback to original stratified split successful (BUT NOT GROUP-AWARE).
+2025-05-17 15:55:23,896 - INFO - Creating dataset (fit_scalers=True) with 224 files planned...
+2025-05-17 15:55:24,032 - INFO - Actual dataset size after loading: 224
+2025-05-17 15:55:24,032 - INFO - Creating dataset (fit_scalers=False) with 57 files planned...
+2025-05-17 15:55:24,051 - INFO - Actual dataset size after loading: 57
+2025-05-17 15:55:24,051 - INFO - Creating dataset (fit_scalers=False) with 71 files planned...
+2025-05-17 15:55:24,074 - INFO - Actual dataset size after loading: 71
+2025-05-17 15:55:24,074 - INFO - 
+--- Checking for Subject Overlap in Datasets ---
+2025-05-17 15:55:24,074 - INFO - Number of unique subjects in Train: 224
+2025-05-17 15:55:24,074 - INFO - Number of unique subjects in Val: 57
+2025-05-17 15:55:24,074 - INFO - Number of unique subjects in Test: 71
+2025-05-17 15:55:24,074 - INFO - No subject overlap detected between splits. Group-based splitting appears successful.
+2025-05-17 15:55:24,074 - INFO - CVAE Train set size: 224, CVAE Validation set size: 57, Final Test set size: 71
+2025-05-17 15:55:24,812 - INFO - 
+--- Training CVAE with ResNet Encoder (on AD, CN, Other) ---
+2025-05-17 15:55:25,861 - INFO - CVAE Epoch 1/400: Beta_KL: 0.0502 Capacity_C: 0.31 LR: 1.0e-04
+  Train Loss: 5209.1657 (Recon: 5208.7861, KL: 7.8729)
+  Val Loss  : 5207.7451 (Recon: 5207.3655, KL: 7.8712)
+2025-05-17 15:55:25,862 - INFO - Validation loss decreased (inf --> 5207.745117). Saving model ...
+2025-05-17 15:55:26,649 - INFO - Validation loss decreased (5207.745117 --> 3636.620117). Saving model ...
+2025-05-17 15:55:27,879 - INFO - Validation loss decreased (3636.620117 --> 2884.290527). Saving model ...
+2025-05-17 15:55:29,098 - INFO - Validation loss decreased (2884.290527 --> 2574.716309). Saving model ...
+2025-05-17 15:55:30,610 - INFO - Validation loss decreased (2574.716309 --> 2436.857788). Saving model ...
+2025-05-17 15:55:31,796 - INFO - Validation loss decreased (2436.857788 --> 2360.760742). Saving model ...
+2025-05-17 15:55:33,027 - INFO - Validation loss decreased (2360.760742 --> 2330.654053). Saving model ...
+2025-05-17 15:55:34,210 - INFO - Validation loss decreased (2330.654053 --> 2311.857422). Saving model ...
+2025-05-17 15:55:35,454 - INFO - Validation loss decreased (2311.857422 --> 2309.721069). Saving model ...
+2025-05-17 15:55:36,728 - INFO - CVAE Epoch 10/400: Beta_KL: 0.0832 Capacity_C: 3.12 LR: 8.5e-05
+  Train Loss: 2145.5314 (Recon: 2136.9059, KL: 106.8318)
+  Val Loss  : 2296.3547 (Recon: 2288.1487, KL: 101.7876)
+2025-05-17 15:55:36,728 - INFO - Validation loss decreased (2309.721069 --> 2296.354736). Saving model ...
+2025-05-17 15:55:37,903 - INFO - Validation loss decreased (2296.354736 --> 2288.851074). Saving model ...
+2025-05-17 15:55:39,066 - INFO - Validation loss decreased (2288.851074 --> 2282.686768). Saving model ...
+2025-05-17 15:55:40,230 - INFO - Validation loss decreased (2282.686768 --> 2280.083862). Saving model ...
+2025-05-17 15:55:41,479 - INFO - Validation loss decreased (2280.083862 --> 2275.570557). Saving model ...
+2025-05-17 15:55:42,746 - INFO - Validation loss decreased (2275.570557 --> 2273.812622). Saving model ...
+2025-05-17 15:55:43,971 - INFO - Validation loss decreased (2273.812622 --> 2268.637207). Saving model ...
+2025-05-17 15:55:48,350 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:55:48,932 - INFO - Validation loss decreased (2268.637207 --> 2266.319702). Saving model ...
+2025-05-17 15:55:55,692 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:55:56,252 - INFO - CVAE Epoch 20/400: Beta_KL: 0.1419 Capacity_C: 6.25 LR: 5.0e-05
+  Train Loss: 2110.2725 (Recon: 2101.1351, KL: 70.6650)
+  Val Loss  : 2267.6318 (Recon: 2258.8418, KL: 68.2169)
+2025-05-17 15:55:56,252 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:55:56,811 - INFO - Validation loss decreased (2266.319702 --> 2265.037720). Saving model ...
+2025-05-17 15:56:03,671 - INFO - Validation loss decreased (2265.037720 --> 2262.521240). Saving model ...
+2025-05-17 15:56:11,298 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:56:11,839 - INFO - Validation loss decreased (2262.521240 --> 2261.039917). Saving model ...
+2025-05-17 15:56:16,563 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:56:17,088 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:56:17,663 - INFO - EarlyStopping counter: 3 out of 35
+2025-05-17 15:56:18,312 - INFO - Validation loss decreased (2261.039917 --> 2260.484009). Saving model ...
+2025-05-17 15:56:19,688 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:56:20,259 - INFO - CVAE Epoch 30/400: Beta_KL: 0.2315 Capacity_C: 9.38 LR: 1.5e-05
+  Train Loss: 2105.1309 (Recon: 2096.4364, KL: 46.9362)
+  Val Loss  : 2259.7252 (Recon: 2251.1958, KL: 46.2229)
+2025-05-17 15:56:20,259 - INFO - Validation loss decreased (2260.484009 --> 2259.725220). Saving model ...
+2025-05-17 15:56:27,318 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:56:27,891 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:56:28,462 - INFO - EarlyStopping counter: 3 out of 35
+2025-05-17 15:56:29,035 - INFO - EarlyStopping counter: 4 out of 35
+2025-05-17 15:56:29,563 - INFO - EarlyStopping counter: 5 out of 35
+2025-05-17 15:56:30,128 - INFO - EarlyStopping counter: 6 out of 35
+2025-05-17 15:56:30,664 - INFO - EarlyStopping counter: 7 out of 35
+2025-05-17 15:56:31,235 - INFO - EarlyStopping counter: 8 out of 35
+2025-05-17 15:56:31,770 - INFO - EarlyStopping counter: 9 out of 35
+2025-05-17 15:56:32,346 - INFO - CVAE Epoch 40/400: Beta_KL: 0.3543 Capacity_C: 12.50 LR: 1.0e-04
+  Train Loss: 2105.2514 (Recon: 2096.0399, KL: 38.4959)
+  Val Loss  : 2261.9589 (Recon: 2252.7692, KL: 38.4343)
+2025-05-17 15:56:32,346 - INFO - EarlyStopping counter: 10 out of 35
+2025-05-17 15:56:32,880 - INFO - EarlyStopping counter: 11 out of 35
+2025-05-17 15:56:33,457 - INFO - EarlyStopping counter: 12 out of 35
+2025-05-17 15:56:34,022 - INFO - EarlyStopping counter: 13 out of 35
+2025-05-17 15:56:34,548 - INFO - Validation loss decreased (2259.725220 --> 2256.640991). Saving model ...
+2025-05-17 15:56:42,874 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:56:43,454 - INFO - Validation loss decreased (2256.640991 --> 2254.856689). Saving model ...
+2025-05-17 15:56:49,514 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:56:50,046 - INFO - Validation loss decreased (2254.856689 --> 2249.848511). Saving model ...
+2025-05-17 15:56:51,340 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:56:51,872 - INFO - CVAE Epoch 50/400: Beta_KL: 0.5000 Capacity_C: 15.62 LR: 9.6e-05
+  Train Loss: 2097.6077 (Recon: 2096.2515, KL: 18.2693)
+  Val Loss  : 2252.4294 (Recon: 2251.3691, KL: 17.7456)
+2025-05-17 15:56:51,872 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:56:52,449 - INFO - Validation loss decreased (2249.848511 --> 2243.092285). Saving model ...
+2025-05-17 15:56:53,769 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:56:54,298 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:56:54,865 - INFO - Validation loss decreased (2243.092285 --> 2242.439087). Saving model ...
+2025-05-17 15:57:02,238 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:57:02,780 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:57:03,352 - INFO - EarlyStopping counter: 3 out of 35
+2025-05-17 15:57:03,897 - INFO - Validation loss decreased (2242.439087 --> 2241.361694). Saving model ...
+2025-05-17 15:57:12,195 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:57:12,733 - INFO - CVAE Epoch 60/400: Beta_KL: 0.6457 Capacity_C: 18.75 LR: 8.5e-05
+  Train Loss: 2086.2360 (Recon: 2085.4271, KL: 18.8276)
+  Val Loss  : 2241.6888 (Recon: 2240.9567, KL: 17.6159)
+2025-05-17 15:57:12,733 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:57:13,317 - INFO - Validation loss decreased (2241.361694 --> 2237.828979). Saving model ...
+2025-05-17 15:57:21,685 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:57:22,274 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:57:22,819 - INFO - EarlyStopping counter: 3 out of 35
+2025-05-17 15:57:23,416 - INFO - EarlyStopping counter: 4 out of 35
+2025-05-17 15:57:23,963 - INFO - EarlyStopping counter: 5 out of 35
+2025-05-17 15:57:24,548 - INFO - EarlyStopping counter: 6 out of 35
+2025-05-17 15:57:25,090 - INFO - EarlyStopping counter: 7 out of 35
+2025-05-17 15:57:25,667 - INFO - Validation loss decreased (2237.828979 --> 2234.718994). Saving model ...
+2025-05-17 15:57:27,745 - INFO - CVAE Epoch 70/400: Beta_KL: 0.7685 Capacity_C: 21.88 LR: 6.9e-05
+  Train Loss: 2080.6442 (Recon: 2080.0636, KL: 22.2828)
+  Val Loss  : 2241.0134 (Recon: 2239.2285, KL: 19.5524)
+2025-05-17 15:57:27,745 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:57:28,296 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:57:28,861 - INFO - Validation loss decreased (2234.718994 --> 2230.019287). Saving model ...
+2025-05-17 15:57:30,163 - INFO - Validation loss decreased (2230.019287 --> 2221.771240). Saving model ...
+2025-05-17 15:57:31,331 - INFO - Validation loss decreased (2221.771240 --> 2195.622681). Saving model ...
+2025-05-17 15:57:32,555 - INFO - Validation loss decreased (2195.622681 --> 2166.887451). Saving model ...
+2025-05-17 15:57:33,784 - INFO - Validation loss decreased (2166.887451 --> 2125.213745). Saving model ...
+2025-05-17 15:57:34,977 - INFO - Validation loss decreased (2125.213745 --> 2113.149414). Saving model ...
+2025-05-17 15:57:36,242 - INFO - Validation loss decreased (2113.149414 --> 2091.405640). Saving model ...
+2025-05-17 15:57:37,476 - INFO - Validation loss decreased (2091.405640 --> 2083.858032). Saving model ...
+2025-05-17 15:57:38,677 - INFO - CVAE Epoch 80/400: Beta_KL: 0.8581 Capacity_C: 25.00 LR: 5.0e-05
+  Train Loss: 1924.9018 (Recon: 1923.6252, KL: 26.0588)
+  Val Loss  : 2081.5647 (Recon: 2080.6549, KL: 23.9397)
+2025-05-17 15:57:38,678 - INFO - Validation loss decreased (2083.858032 --> 2081.564697). Saving model ...
+2025-05-17 15:57:39,897 - INFO - Validation loss decreased (2081.564697 --> 2063.744141). Saving model ...
+2025-05-17 15:57:41,048 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:57:41,615 - INFO - Validation loss decreased (2063.744141 --> 2056.536133). Saving model ...
+2025-05-17 15:57:42,867 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:57:43,413 - INFO - Validation loss decreased (2056.536133 --> 2053.673218). Saving model ...
+2025-05-17 15:57:44,691 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:57:45,220 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:57:45,791 - INFO - EarlyStopping counter: 3 out of 35
+2025-05-17 15:57:46,383 - INFO - EarlyStopping counter: 4 out of 35
+2025-05-17 15:57:46,891 - INFO - CVAE Epoch 90/400: Beta_KL: 0.9168 Capacity_C: 25.00 LR: 3.1e-05
+  Train Loss: 1894.6316 (Recon: 1893.1007, KL: 25.6555)
+  Val Loss  : 2059.5151 (Recon: 2059.1293, KL: 25.4208)
+2025-05-17 15:57:46,891 - INFO - EarlyStopping counter: 5 out of 35
+2025-05-17 15:57:47,395 - INFO - EarlyStopping counter: 6 out of 35
+2025-05-17 15:57:47,903 - INFO - Validation loss decreased (2053.673218 --> 2047.379089). Saving model ...
+2025-05-17 15:57:53,868 - INFO - Validation loss decreased (2047.379089 --> 2042.799316). Saving model ...
+2025-05-17 15:58:01,401 - INFO - Validation loss decreased (2042.799316 --> 2042.023987). Saving model ...
+2025-05-17 15:58:09,151 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:58:09,722 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:58:10,259 - INFO - Validation loss decreased (2042.023987 --> 2035.385071). Saving model ...
+2025-05-17 15:58:16,060 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:58:16,591 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:58:17,160 - INFO - CVAE Epoch 100/400: Beta_KL: 0.9526 Capacity_C: 25.00 LR: 1.5e-05
+  Train Loss: 1885.9196 (Recon: 1884.8278, KL: 25.8204)
+  Val Loss  : 2049.0778 (Recon: 2048.5150, KL: 24.4093)
+2025-05-17 15:58:17,160 - INFO - EarlyStopping counter: 3 out of 35
+2025-05-17 15:58:17,693 - INFO - EarlyStopping counter: 4 out of 35
+2025-05-17 15:58:18,263 - INFO - EarlyStopping counter: 5 out of 35
+2025-05-17 15:58:18,796 - INFO - EarlyStopping counter: 6 out of 35
+2025-05-17 15:58:19,377 - INFO - Validation loss decreased (2035.385071 --> 2033.488281). Saving model ...
+2025-05-17 15:58:20,915 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:58:21,483 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:58:22,048 - INFO - EarlyStopping counter: 3 out of 35
+2025-05-17 15:58:22,626 - INFO - EarlyStopping counter: 4 out of 35
+2025-05-17 15:58:23,171 - INFO - EarlyStopping counter: 5 out of 35
+2025-05-17 15:58:23,715 - INFO - CVAE Epoch 110/400: Beta_KL: 0.9734 Capacity_C: 25.00 LR: 3.9e-06
+  Train Loss: 1881.1526 (Recon: 1879.7013, KL: 26.2509)
+  Val Loss  : 2040.9202 (Recon: 2040.5580, KL: 24.6280)
+2025-05-17 15:58:23,716 - INFO - EarlyStopping counter: 6 out of 35
+2025-05-17 15:58:24,282 - INFO - EarlyStopping counter: 7 out of 35
+2025-05-17 15:58:24,830 - INFO - EarlyStopping counter: 8 out of 35
+2025-05-17 15:58:25,405 - INFO - EarlyStopping counter: 9 out of 35
+2025-05-17 15:58:25,945 - INFO - EarlyStopping counter: 10 out of 35
+2025-05-17 15:58:26,543 - INFO - EarlyStopping counter: 11 out of 35
+2025-05-17 15:58:27,087 - INFO - EarlyStopping counter: 12 out of 35
+2025-05-17 15:58:27,674 - INFO - EarlyStopping counter: 13 out of 35
+2025-05-17 15:58:28,213 - INFO - EarlyStopping counter: 14 out of 35
+2025-05-17 15:58:28,816 - INFO - EarlyStopping counter: 15 out of 35
+2025-05-17 15:58:29,352 - INFO - CVAE Epoch 120/400: Beta_KL: 0.9852 Capacity_C: 25.00 LR: 1.0e-04
+  Train Loss: 1878.2915 (Recon: 1876.9016, KL: 25.6996)
+  Val Loss  : 2032.6265 (Recon: 2031.7405, KL: 24.1008)
+2025-05-17 15:58:29,352 - INFO - Validation loss decreased (2033.488281 --> 2032.626465). Saving model ...
+2025-05-17 15:58:35,846 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:58:36,372 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:58:36,945 - INFO - EarlyStopping counter: 3 out of 35
+2025-05-17 15:58:37,478 - INFO - EarlyStopping counter: 4 out of 35
+2025-05-17 15:58:38,048 - INFO - EarlyStopping counter: 5 out of 35
+2025-05-17 15:58:38,584 - INFO - EarlyStopping counter: 6 out of 35
+2025-05-17 15:58:39,164 - INFO - EarlyStopping counter: 7 out of 35
+2025-05-17 15:58:39,727 - INFO - Validation loss decreased (2032.626465 --> 2028.350891). Saving model ...
+2025-05-17 15:58:47,608 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:58:48,190 - INFO - CVAE Epoch 130/400: Beta_KL: 0.9918 Capacity_C: 25.00 LR: 9.9e-05
+  Train Loss: 1883.1494 (Recon: 1879.5194, KL: 21.6209)
+  Val Loss  : 2043.2239 (Recon: 2039.4435, KL: 21.1884)
+2025-05-17 15:58:48,190 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:58:48,714 - INFO - Validation loss decreased (2028.350891 --> 2025.643188). Saving model ...
+2025-05-17 15:58:50,104 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:58:50,629 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:58:51,188 - INFO - EarlyStopping counter: 3 out of 35
+2025-05-17 15:58:51,713 - INFO - EarlyStopping counter: 4 out of 35
+2025-05-17 15:58:52,273 - INFO - Validation loss decreased (2025.643188 --> 2018.367371). Saving model ...
+2025-05-17 15:58:54,330 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:58:54,858 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:58:55,414 - INFO - EarlyStopping counter: 3 out of 35
+2025-05-17 15:58:55,985 - INFO - CVAE Epoch 140/400: Beta_KL: 0.9955 Capacity_C: 25.00 LR: 9.6e-05
+  Train Loss: 1867.7294 (Recon: 1862.4003, KL: 30.1602)
+  Val Loss  : 2035.7792 (Recon: 2034.2750, KL: 26.5111)
+2025-05-17 15:58:55,986 - INFO - EarlyStopping counter: 4 out of 35
+2025-05-17 15:58:56,514 - INFO - EarlyStopping counter: 5 out of 35
+2025-05-17 15:58:57,089 - INFO - EarlyStopping counter: 6 out of 35
+2025-05-17 15:58:57,615 - INFO - EarlyStopping counter: 7 out of 35
+2025-05-17 15:58:58,183 - INFO - EarlyStopping counter: 8 out of 35
+2025-05-17 15:58:58,713 - INFO - EarlyStopping counter: 9 out of 35
+2025-05-17 15:58:59,280 - INFO - EarlyStopping counter: 10 out of 35
+2025-05-17 15:58:59,821 - INFO - EarlyStopping counter: 11 out of 35
+2025-05-17 15:59:00,393 - INFO - EarlyStopping counter: 12 out of 35
+2025-05-17 15:59:00,924 - INFO - EarlyStopping counter: 13 out of 35
+2025-05-17 15:59:01,497 - INFO - CVAE Epoch 150/400: Beta_KL: 0.9975 Capacity_C: 25.00 LR: 9.2e-05
+  Train Loss: 1858.0434 (Recon: 1855.8256, KL: 26.4935)
+  Val Loss  : 2046.1149 (Recon: 2044.3513, KL: 23.2321)
+2025-05-17 15:59:01,498 - INFO - EarlyStopping counter: 14 out of 35
+2025-05-17 15:59:02,025 - INFO - EarlyStopping counter: 15 out of 35
+2025-05-17 15:59:02,598 - INFO - EarlyStopping counter: 16 out of 35
+2025-05-17 15:59:03,129 - INFO - EarlyStopping counter: 17 out of 35
+2025-05-17 15:59:03,692 - INFO - Validation loss decreased (2018.367371 --> 2017.211609). Saving model ...
+2025-05-17 15:59:04,995 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:59:05,558 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:59:06,085 - INFO - EarlyStopping counter: 3 out of 35
+2025-05-17 15:59:06,649 - INFO - EarlyStopping counter: 4 out of 35
+2025-05-17 15:59:07,178 - INFO - EarlyStopping counter: 5 out of 35
+2025-05-17 15:59:07,746 - INFO - CVAE Epoch 160/400: Beta_KL: 0.9986 Capacity_C: 25.00 LR: 8.5e-05
+  Train Loss: 1815.9273 (Recon: 1811.5896, KL: 29.1515)
+  Val Loss  : 2018.8243 (Recon: 2017.7821, KL: 23.9563)
+2025-05-17 15:59:07,746 - INFO - EarlyStopping counter: 6 out of 35
+2025-05-17 15:59:08,276 - INFO - Validation loss decreased (2017.211609 --> 2007.307312). Saving model ...
+2025-05-17 15:59:14,624 - INFO - Validation loss decreased (2007.307312 --> 2001.053223). Saving model ...
+2025-05-17 15:59:22,387 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:59:22,955 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:59:23,481 - INFO - Validation loss decreased (2001.053223 --> 1999.860840). Saving model ...
+2025-05-17 15:59:31,584 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:59:32,147 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:59:32,681 - INFO - EarlyStopping counter: 3 out of 35
+2025-05-17 15:59:33,264 - INFO - EarlyStopping counter: 4 out of 35
+2025-05-17 15:59:33,840 - INFO - CVAE Epoch 170/400: Beta_KL: 0.9993 Capacity_C: 25.00 LR: 7.8e-05
+  Train Loss: 1801.6136 (Recon: 1799.6709, KL: 26.4770)
+  Val Loss  : 2001.0732 (Recon: 2000.5466, KL: 24.7466)
+2025-05-17 15:59:33,841 - INFO - EarlyStopping counter: 5 out of 35
+2025-05-17 15:59:34,367 - INFO - EarlyStopping counter: 6 out of 35
+2025-05-17 15:59:34,941 - INFO - EarlyStopping counter: 7 out of 35
+2025-05-17 15:59:35,487 - INFO - Validation loss decreased (1999.860840 --> 1997.552368). Saving model ...
+2025-05-17 15:59:36,714 - INFO - Validation loss decreased (1997.552368 --> 1996.624207). Saving model ...
+2025-05-17 15:59:38,600 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:59:39,173 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 15:59:39,697 - INFO - EarlyStopping counter: 3 out of 35
+2025-05-17 15:59:40,265 - INFO - EarlyStopping counter: 4 out of 35
+2025-05-17 15:59:40,791 - INFO - EarlyStopping counter: 5 out of 35
+2025-05-17 15:59:41,365 - INFO - CVAE Epoch 180/400: Beta_KL: 0.9996 Capacity_C: 25.00 LR: 6.9e-05
+  Train Loss: 1788.3608 (Recon: 1786.0846, KL: 27.2772)
+  Val Loss  : 1993.6044 (Recon: 1992.3185, KL: 23.7135)
+2025-05-17 15:59:41,365 - INFO - Validation loss decreased (1996.624207 --> 1993.604431). Saving model ...
+2025-05-17 15:59:47,537 - INFO - Validation loss decreased (1993.604431 --> 1992.195801). Saving model ...
+2025-05-17 15:59:55,375 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 15:59:55,907 - INFO - Validation loss decreased (1992.195801 --> 1984.854736). Saving model ...
+2025-05-17 16:00:04,206 - INFO - EarlyStopping counter: 1 out of 35
+2025-05-17 16:00:04,775 - INFO - EarlyStopping counter: 2 out of 35
+2025-05-17 16:00:05,298 - INFO - EarlyStopping counter: 3 out of 35
+2025-05-17 16:00:05,861 - INFO - EarlyStopping counter: 4 out of 35
+2025-05-17 16:00:06,433 - INFO - EarlyStopping counter: 5 out of 35
+2025-05-17 16:00:06,963 - INFO - EarlyStopping counter: 6 out of 35
+2025-05-17 16:00:07,539 - INFO - CVAE Epoch 190/400: Beta_KL: 0.9998 Capacity_C: 25.00 LR: 6.0e-05
+  Train Loss: 1777.5471 (Recon: 1774.2921, KL: 28.2557)
+  Val Loss  : 1995.7400 (Recon: 1995.4922, KL: 24.9283)
+2025-05-17 16:00:07,539 - INFO - EarlyStopping counter: 7 out of 35
+2025-05-17 16:00:08,067 - INFO - EarlyStopping counter: 8 out of 35
+2025-05-17 16:00:08,638 - INFO - EarlyStopping counter: 9 out of 35
+2025-05-17 16:00:09,160 - INFO - EarlyStopping counter: 10 out of 35
+2025-05-17 16:00:09,719 - INFO - EarlyStopping counter: 11 out of 35
+2025-05-17 16:00:10,246 - INFO - EarlyStopping counter: 12 out of 35
+2025-05-17 16:00:10,803 - INFO - EarlyStopping counter: 13 out of 35
+2025-05-17 16:00:11,316 - INFO - EarlyStopping counter: 14 out of 35
+2025-05-17 16:00:11,856 - INFO - EarlyStopping counter: 15 out of 35
+2025-05-17 16:00:12,357 - INFO - EarlyStopping counter: 16 out of 35
+2025-05-17 16:00:12,916 - INFO - CVAE Epoch 200/400: Beta_KL: 0.9999 Capacity_C: 25.00 LR: 5.0e-05
+  Train Loss: 1770.0657 (Recon: 1766.8286, KL: 27.1977)
+  Val Loss  : 1999.1992 (Recon: 1998.8392, KL: 25.3600)
+2025-05-17 16:00:12,916 - INFO - EarlyStopping counter: 17 out of 35
+2025-05-17 16:00:13,419 - INFO - EarlyStopping counter: 18 out of 35
+2025-05-17 16:00:13,920 - INFO - EarlyStopping counter: 19 out of 35
+2025-05-17 16:00:14,464 - INFO - EarlyStopping counter: 20 out of 35
+2025-05-17 16:00:14,964 - INFO - EarlyStopping counter: 21 out of 35
+2025-05-17 16:00:15,466 - INFO - EarlyStopping counter: 22 out of 35
+2025-05-17 16:00:15,966 - INFO - EarlyStopping counter: 23 out of 35
+2025-05-17 16:00:16,467 - INFO - EarlyStopping counter: 24 out of 35
+2025-05-17 16:00:16,967 - INFO - EarlyStopping counter: 25 out of 35
+2025-05-17 16:00:17,468 - INFO - EarlyStopping counter: 26 out of 35
+2025-05-17 16:00:17,967 - INFO - CVAE Epoch 210/400: Beta_KL: 0.9999 Capacity_C: 25.00 LR: 4.0e-05
+  Train Loss: 1759.4039 (Recon: 1757.1297, KL: 25.5868)
+  Val Loss  : 2008.9291 (Recon: 2006.8732, KL: 22.9439)
+2025-05-17 16:00:17,968 - INFO - EarlyStopping counter: 27 out of 35
+2025-05-17 16:00:18,468 - INFO - EarlyStopping counter: 28 out of 35
+2025-05-17 16:00:19,026 - INFO - EarlyStopping counter: 29 out of 35
+2025-05-17 16:00:19,553 - INFO - EarlyStopping counter: 30 out of 35
+2025-05-17 16:00:20,113 - INFO - EarlyStopping counter: 31 out of 35
+2025-05-17 16:00:20,648 - INFO - EarlyStopping counter: 32 out of 35
+2025-05-17 16:00:21,222 - INFO - EarlyStopping counter: 33 out of 35
+2025-05-17 16:00:21,749 - INFO - EarlyStopping counter: 34 out of 35
+2025-05-17 16:00:22,321 - INFO - EarlyStopping counter: 35 out of 35
+2025-05-17 16:00:22,321 - INFO - CVAE Early stopping triggered.
+2025-05-17 16:00:22,321 - INFO - Loading best CVAE model weights.
+2025-05-17 16:00:22,507 - INFO - 
+--- Preparing Data for AD vs CN Classifier ---
+2025-05-17 16:00:23,157 - INFO - AD/CN Classifier: Train size=117, Val size=30, Test size=37
+2025-05-17 16:00:23,158 - INFO - Train AD/CN dist: CN=57, AD=60
+2025-05-17 16:00:23,158 - INFO - Val AD/CN dist: CN=14, AD=16
+2025-05-17 16:00:23,158 - INFO - Test AD/CN dist: CN=18, AD=19
+2025-05-17 16:00:23,159 - INFO - Using class weights for classifier: CN=1.03, AD=0.97
+2025-05-17 16:00:23,159 - INFO - 
+--- Training AD vs CN Classifier on CVAE Latent Space ---
+2025-05-17 16:00:23,230 - INFO - Validation metric improved (-inf --> 0.276786). Saving model ...
+2025-05-17 16:00:23,231 - INFO - Binary Classifier Epoch 1/200: LR: 1.0e-04
+  Train Loss: 0.7125, Train Acc: 0.5043
+  Val Loss  : 0.7141, Val Acc  : 0.4667, Val AUC: 0.2768
+2025-05-17 16:00:23,249 - INFO - Validation metric improved (0.276786 --> 0.285714). Saving model ...
+2025-05-17 16:00:23,263 - INFO - Validation metric improved (0.285714 --> 0.319196). Saving model ...
+2025-05-17 16:00:23,277 - INFO - Validation metric improved (0.319196 --> 0.330357). Saving model ...
+2025-05-17 16:00:23,292 - INFO - Validation metric improved (0.330357 --> 0.379464). Saving model ...
+2025-05-17 16:00:23,307 - INFO - Validation metric improved (0.379464 --> 0.426339). Saving model ...
+2025-05-17 16:00:23,323 - INFO - Validation metric improved (0.426339 --> 0.433036). Saving model ...
+2025-05-17 16:00:23,336 - INFO - Validation metric improved (0.433036 --> 0.515625). Saving model ...
+2025-05-17 16:00:23,355 - INFO - Validation metric improved (0.515625 --> 0.582589). Saving model ...
+2025-05-17 16:00:23,371 - INFO - Validation metric improved (0.582589 --> 0.587054). Saving model ...
+2025-05-17 16:00:23,372 - INFO - Binary Classifier Epoch 10/200: LR: 1.0e-04
+  Train Loss: 0.6637, Train Acc: 0.5812
+  Val Loss  : 0.6959, Val Acc  : 0.4333, Val AUC: 0.5871
+2025-05-17 16:00:23,390 - INFO - EarlyStopping counter: 1 out of 50
+2025-05-17 16:00:23,404 - INFO - EarlyStopping counter: 2 out of 50
+2025-05-17 16:00:23,417 - INFO - EarlyStopping counter: 3 out of 50
+2025-05-17 16:00:23,430 - INFO - Validation metric improved (0.587054 --> 0.600446). Saving model ...
+2025-05-17 16:00:23,446 - INFO - Validation metric improved (0.600446 --> 0.631696). Saving model ...
+2025-05-17 16:00:23,461 - INFO - EarlyStopping counter: 1 out of 50
+2025-05-17 16:00:23,475 - INFO - EarlyStopping counter: 2 out of 50
+2025-05-17 16:00:23,489 - INFO - EarlyStopping counter: 3 out of 50
+2025-05-17 16:00:23,506 - INFO - Validation metric improved (0.631696 --> 0.656250). Saving model ...
+2025-05-17 16:00:23,523 - INFO - EarlyStopping counter: 1 out of 50
+2025-05-17 16:00:23,524 - INFO - Binary Classifier Epoch 20/200: LR: 1.0e-04
+  Train Loss: 0.6669, Train Acc: 0.6239
+  Val Loss  : 0.6833, Val Acc  : 0.6000, Val AUC: 0.5982
+2025-05-17 16:00:23,539 - INFO - EarlyStopping counter: 2 out of 50
+2025-05-17 16:00:23,552 - INFO - EarlyStopping counter: 3 out of 50
+2025-05-17 16:00:23,564 - INFO - EarlyStopping counter: 4 out of 50
+2025-05-17 16:00:23,579 - INFO - EarlyStopping counter: 5 out of 50
+2025-05-17 16:00:23,597 - INFO - Validation metric improved (0.656250 --> 0.709821). Saving model ...
+2025-05-17 16:00:23,612 - INFO - Validation metric improved (0.709821 --> 0.736607). Saving model ...
+2025-05-17 16:00:23,625 - INFO - EarlyStopping counter: 1 out of 50
+2025-05-17 16:00:23,638 - INFO - Validation metric improved (0.736607 --> 0.823661). Saving model ...
+2025-05-17 16:00:23,653 - INFO - EarlyStopping counter: 1 out of 50
+2025-05-17 16:00:23,666 - INFO - EarlyStopping counter: 2 out of 50
+2025-05-17 16:00:23,666 - INFO - Binary Classifier Epoch 30/200: LR: 1.0e-04
+  Train Loss: 0.6056, Train Acc: 0.7179
+  Val Loss  : 0.6583, Val Acc  : 0.7333, Val AUC: 0.7746
+2025-05-17 16:00:23,681 - INFO - EarlyStopping counter: 3 out of 50
+2025-05-17 16:00:23,699 - INFO - Validation metric improved (0.823661 --> 0.870536). Saving model ...
+2025-05-17 16:00:23,715 - INFO - EarlyStopping counter: 1 out of 50
+2025-05-17 16:00:23,729 - INFO - EarlyStopping counter: 2 out of 50
+2025-05-17 16:00:23,745 - INFO - Validation metric improved (0.870536 --> 0.875000). Saving model ...
+2025-05-17 16:00:23,764 - INFO - EarlyStopping counter: 1 out of 50
+2025-05-17 16:00:23,780 - INFO - EarlyStopping counter: 2 out of 50
+2025-05-17 16:00:23,795 - INFO - EarlyStopping counter: 3 out of 50
+2025-05-17 16:00:23,811 - INFO - EarlyStopping counter: 4 out of 50
+2025-05-17 16:00:23,824 - INFO - EarlyStopping counter: 5 out of 50
+2025-05-17 16:00:23,824 - INFO - Binary Classifier Epoch 40/200: LR: 1.0e-04
+  Train Loss: 0.6158, Train Acc: 0.7265
+  Val Loss  : 0.6281, Val Acc  : 0.7333, Val AUC: 0.8504
+2025-05-17 16:00:23,837 - INFO - EarlyStopping counter: 6 out of 50
+2025-05-17 16:00:23,851 - INFO - EarlyStopping counter: 7 out of 50
+2025-05-17 16:00:23,865 - INFO - EarlyStopping counter: 8 out of 50
+2025-05-17 16:00:23,879 - INFO - EarlyStopping counter: 9 out of 50
+2025-05-17 16:00:23,894 - INFO - EarlyStopping counter: 10 out of 50
+2025-05-17 16:00:23,911 - INFO - EarlyStopping counter: 11 out of 50
+2025-05-17 16:00:23,927 - INFO - EarlyStopping counter: 12 out of 50
+2025-05-17 16:00:23,943 - INFO - EarlyStopping counter: 13 out of 50
+2025-05-17 16:00:23,960 - INFO - EarlyStopping counter: 14 out of 50
+2025-05-17 16:00:23,977 - INFO - EarlyStopping counter: 15 out of 50
+2025-05-17 16:00:23,977 - INFO - Binary Classifier Epoch 50/200: LR: 1.0e-05
+  Train Loss: 0.5674, Train Acc: 0.7179
+  Val Loss  : 0.6121, Val Acc  : 0.8333, Val AUC: 0.8527
+2025-05-17 16:00:23,992 - INFO - EarlyStopping counter: 16 out of 50
+2025-05-17 16:00:24,006 - INFO - EarlyStopping counter: 17 out of 50
+2025-05-17 16:00:24,019 - INFO - EarlyStopping counter: 18 out of 50
+2025-05-17 16:00:24,032 - INFO - EarlyStopping counter: 19 out of 50
+2025-05-17 16:00:24,046 - INFO - EarlyStopping counter: 20 out of 50
+2025-05-17 16:00:24,060 - INFO - EarlyStopping counter: 21 out of 50
+2025-05-17 16:00:24,110 - INFO - EarlyStopping counter: 22 out of 50
+2025-05-17 16:00:24,127 - INFO - EarlyStopping counter: 23 out of 50
+2025-05-17 16:00:24,141 - INFO - EarlyStopping counter: 24 out of 50
+2025-05-17 16:00:24,155 - INFO - EarlyStopping counter: 25 out of 50
+2025-05-17 16:00:24,155 - INFO - Binary Classifier Epoch 60/200: LR: 1.0e-06
+  Train Loss: 0.5345, Train Acc: 0.8291
+  Val Loss  : 0.6090, Val Acc  : 0.8333, Val AUC: 0.8616
+2025-05-17 16:00:24,169 - INFO - EarlyStopping counter: 26 out of 50
+2025-05-17 16:00:24,184 - INFO - EarlyStopping counter: 27 out of 50
+2025-05-17 16:00:24,200 - INFO - EarlyStopping counter: 28 out of 50
+2025-05-17 16:00:24,214 - INFO - EarlyStopping counter: 29 out of 50
+2025-05-17 16:00:24,230 - INFO - EarlyStopping counter: 30 out of 50
+2025-05-17 16:00:24,246 - INFO - EarlyStopping counter: 31 out of 50
+2025-05-17 16:00:24,261 - INFO - EarlyStopping counter: 32 out of 50
+2025-05-17 16:00:24,276 - INFO - EarlyStopping counter: 33 out of 50
+2025-05-17 16:00:24,292 - INFO - EarlyStopping counter: 34 out of 50
+2025-05-17 16:00:24,311 - INFO - EarlyStopping counter: 35 out of 50
+2025-05-17 16:00:24,311 - INFO - Binary Classifier Epoch 70/200: LR: 1.0e-07
+  Train Loss: 0.5700, Train Acc: 0.7949
+  Val Loss  : 0.6069, Val Acc  : 0.8000, Val AUC: 0.8616
+2025-05-17 16:00:24,325 - INFO - EarlyStopping counter: 36 out of 50
+2025-05-17 16:00:24,340 - INFO - EarlyStopping counter: 37 out of 50
+2025-05-17 16:00:24,357 - INFO - EarlyStopping counter: 38 out of 50
+2025-05-17 16:00:24,372 - INFO - EarlyStopping counter: 39 out of 50
+2025-05-17 16:00:24,391 - INFO - EarlyStopping counter: 40 out of 50
+2025-05-17 16:00:24,408 - INFO - EarlyStopping counter: 41 out of 50
+2025-05-17 16:00:24,419 - INFO - EarlyStopping counter: 42 out of 50
+2025-05-17 16:00:24,432 - INFO - EarlyStopping counter: 43 out of 50
+2025-05-17 16:00:24,445 - INFO - EarlyStopping counter: 44 out of 50
+2025-05-17 16:00:24,461 - INFO - EarlyStopping counter: 45 out of 50
+2025-05-17 16:00:24,461 - INFO - Binary Classifier Epoch 80/200: LR: 1.0e-08
+  Train Loss: 0.5731, Train Acc: 0.8547
+  Val Loss  : 0.6049, Val Acc  : 0.8333, Val AUC: 0.8705
+2025-05-17 16:00:24,474 - INFO - EarlyStopping counter: 46 out of 50
+2025-05-17 16:00:24,489 - INFO - EarlyStopping counter: 47 out of 50
+2025-05-17 16:00:24,506 - INFO - EarlyStopping counter: 48 out of 50
+2025-05-17 16:00:24,519 - INFO - EarlyStopping counter: 49 out of 50
+2025-05-17 16:00:24,531 - INFO - EarlyStopping counter: 50 out of 50
+2025-05-17 16:00:24,532 - INFO - Classifier Early stopping triggered.
+2025-05-17 16:00:24,532 - INFO - Loading best binary classifier model weights.
+2025-05-17 16:00:24,787 - INFO - 
+--- Final Evaluation on Test Set (AD vs CN Classifier) ---
+2025-05-17 16:00:24,789 - INFO - 
+--- Tuning Decision Threshold on Validation Set ---
+2025-05-17 16:00:24,791 - INFO - Best decision threshold based on Youden's J on validation set: 0.5024
+2025-05-17 16:00:24,791 - INFO - Final Test Set Performance with default 0.5 threshold: Accuracy = 0.8919, AUC = 0.8538
+2025-05-17 16:00:24,792 - INFO - Final Test Set Accuracy with tuned threshold (0.5024): 0.8919
+2025-05-17 16:00:24,792 - INFO - 
+Final Test Set Classification Report (AD vs CN) with tuned threshold:
+2025-05-17 16:00:24,794 - INFO - 
+              precision    recall  f1-score   support
+
+      CN (0)       0.82      1.00      0.90        18
+      AD (1)       1.00      0.79      0.88        19
+
+    accuracy                           0.89        37
+   macro avg       0.91      0.89      0.89        37
+weighted avg       0.91      0.89      0.89        37
+
+2025-05-17 16:00:24,794 - INFO - 
+Final Test Set Confusion Matrix (AD vs CN) with tuned threshold:
+2025-05-17 16:00:24,795 - INFO - 
+[[18  0]
+ [ 4 15]]
+2025-05-17 16:00:24,795 - INFO - 
+--- Visualizing Latent Space with t-SNE (Train Data AD/CN) ---
+2025-05-17 16:00:24,795 - INFO - Running t-SNE with perplexity: 30.0 on 117 samples.
+2025-05-17 16:00:24,965 - INFO - Too many unique subjects (117) in classifier training set for t-SNE style. Plotting without subject style.
+2025-05-17 16:00:25,160 - INFO - t-SNE plot saved to cvae_pytorch_models_AD_CN_classifier_phd_v5_leakage_fix/cvae_latent_tsne_plot.png
+2025-05-17 16:00:25,160 - INFO - 
+--- Sanity Check: Logistic Regression on Latent Features ---
+2025-05-17 16:00:25,164 - INFO - Logistic Regression - Validation AUC: 0.9688
+2025-05-17 16:00:25,165 - INFO - Logistic Regression - Test Accuracy: 0.9189, Test AUC: 0.9298
+2025-05-17 16:00:25,167 - INFO - Logistic Regression - Test Classification Report:
+              precision    recall  f1-score   support
+
+      CN (0)       0.89      0.94      0.92        18
+      AD (1)       0.94      0.89      0.92        19
+
+    accuracy                           0.92        37
+   macro avg       0.92      0.92      0.92        37
+weighted avg       0.92      0.92      0.92        37
+
+2025-05-17 16:00:25,167 - INFO - --- Script Finished ---
